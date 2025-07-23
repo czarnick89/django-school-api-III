@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('student_app', '0003_alter_student_locker_combination'),
+        ('student_app', '0004_alter_student_locker_number'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='student',
             name='locker_number',
-            field=models.IntegerField(default=110, unique=True, verbose_name=django.core.validators.MinValueValidator(1)),
+            field=models.IntegerField(default=110, unique=True, validators=[django.core.validators.MinValueValidator(1)]),
         ),
     ]
